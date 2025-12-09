@@ -15,13 +15,13 @@ export default function LogoBar(props) {
       <SmartLink
         href={`/${siteConfig('GITBOOK_INDEX_PAGE', '', CONFIG)}`}
         className='flex text-lg font-bold md:text-2xl dark:text-gray-200 items-center'>
-        /*<LazyImage
+        {/* <LazyImage
           src={siteInfo?.icon}
           width={24}
           height={24}
           alt={siteConfig('AUTHOR')}
           className='mr-2 hidden md:block '
-        />*/
+        />*/}
         {siteInfo?.title || siteConfig('TITLE')}
       </SmartLink>
     </div>
