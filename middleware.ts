@@ -6,10 +6,10 @@ import BLOG from './blog.config'
 
 /**
  * Clerk 身份验证中间件
+ * 优化后的匹配规则，排除静态资源和 API，仅对页面路由生效
  */
 export const config = {
-  // 这里设置白名单，防止静态资源被拦截
-  matcher: ['/((?!.*\\..*|_next|/sign-in|/auth).*)', '/', '/(api|trpc)(.*)']
+  matcher: ['/((?!api|_next|static|favicon.ico|.*\\..*|sign-in|auth).*)']
 }
 
 // 限制登录访问的路由
